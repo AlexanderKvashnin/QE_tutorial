@@ -35,3 +35,10 @@ matdyn.x < matdyn.freq.in > matdyn.freq.out
 As a result you will obtain similar picture.
 
 ![image](https://github.com/user-attachments/assets/7b1ac319-2787-4491-b451-4e3e60c9b15b)
+
+
+(七). Now we can calculate the phonon density of states. Input file for phonon DOS calculation is in `matdyn.dos.in` in the `4.PH` folder
+```
+matdyn.x < matdyn.dos.in > matdyn.dos.out
+```
+And plot the phonon DOS by using the draft of the corresponding python script 
