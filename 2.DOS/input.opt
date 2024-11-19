@@ -27,17 +27,16 @@
  /
 &CELL
    cell_dynamics = 'bfgs' ,
-   cell_factor = 1.0,
+   cell_factor = 1.5,
    press = 0 ,
 /
 
- ATOMIC_SPECIES
- C 12 C.1.UPF
+# Type of atoms and Pseudopotential files. Change the name of PP
 
- K_POINTS {automatic}
- 6 6 6  0 0 0
+ATOMIC_SPECIES
+C 12 C.pbe-n-rrkjus_psl.1.0.0.UPF    
 
-ATOMIC_POSITIONS (crystal)
+ATOMIC_POSITIONS {crystal}
 C 0.250000 0.750000 0.250000 
 C 0.000000 0.000000 0.500000 
 C 0.250000 0.250000 0.750000 
@@ -47,8 +46,14 @@ C 0.500000 0.000000 0.000000
 C 0.750000 0.250000 0.250000 
 C 0.500000 0.500000 0.500000 
 
+# Lattice parameters which can be specified in Angstroms or in Bohr
 
 CELL_PARAMETERS {Angstrom}
 3.573710 0.000000 0.000000
 0.000000 3.573710 0.000000
-0.000000 0.000000 3.573710
+0.000000 0.000000 3.57232
+
+# K-point grid
+
+K_POINTS {automatic}
+  8 8 8 1 1 1
