@@ -16,7 +16,7 @@ pw.x < input.1.opt > output.opt
 ```
 After a while you will find `output.opt` file in the folder.
 
-**TIPS**
+## **Useful code**
 To get the energy values from the `output.opt` just type 
 ```
 grep ! output.opt
@@ -45,7 +45,7 @@ which gives you the following information
 Try to write you one-line script to get the atomic positions
 
 ## **HOMEWORK**
-(一). Choose the structure from the materials project database (_https://next-gen.materialsproject.org/_)
+(一). Choose the structure of semiconductore (covalent material) from the materials project database (_https://next-gen.materialsproject.org/_)
 
 (二). Perform convergence test w.r.t. k-points mesh (`K_POINTS`), cutoff energy (`ecutwfc`).
 
@@ -57,6 +57,11 @@ Try to write you one-line script to get the atomic positions
 (六). Use `relax` key-word in the input in order to calculate Equation of states (EOS), e.g. `E(V)` dependence.
 
 (七). Calculate bulk modulus of your structure using EOS. 
+
+## **LAB #2**
+### **Electronic density of states**
+
+
 
 
 
