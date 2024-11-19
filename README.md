@@ -84,7 +84,7 @@ The DOS data in the `C.dos.dat` file that we specified in our input file `input.
 ## **HOMEWORK**
 (一). Run DOS calculation of your structure.
 
-(二). Adopt and use a python script from the `2.DOS` folder to plot density of state function.
+(二). Adopt and use a draft of the python script from the `2.DOS` folder to plot density of state function.
 
 (三). Define correct Fermi energy and the band gap of your semiconductor.
 
