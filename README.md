@@ -6,4 +6,6 @@ Course will cover both classical and modern topics of computational methods in a
 More details and information on the course can be found at **https://sites.skoltech.ru/iocd/cmas/**
 
 Cource contains several LAB works
-## LAB #1
+### [LAB #1](https://github.com/AlexanderKvashnin/CMAS/blob/main/LAB1.md)
+### [LAB #2](https://github.com/AlexanderKvashnin/CMAS/blob/main/LAB2.md)
+### [LAB #3](https://github.com/AlexanderKvashnin/CMAS/blob/main/LAB3.md)
