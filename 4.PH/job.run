@@ -1,0 +1,6 @@
+#!/bin/sh
+
+mpiexec -np 8 ~/soft/qe-7.0/bin/pw.x < input.opt | tee output.opt
+mpiexec -np 8 ~/soft/qe-7.0/bin/pw.x < input.scf | tee output.scf
+mpiexec -np 8 ~/soft/qe-7.0/bin/ph.x < ph.in | tee ph.out
+mpiexec -np 8 ~/soft/qe-7.0/bin/q2r.x < q2r.in | tee q2r.out

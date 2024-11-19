@@ -1,0 +1,60 @@
+
+     Program Q2R v.7.0 starts on  1Dec2023 at 15:35:43 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 29 465901 (2017);
+         "P. Giannozzi et al., J. Chem. Phys. 152 154105 (2020);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Parallel version (MPI), running on     8 processors
+
+     MPI processes distributed on     1 nodes
+     R & G space division:  proc/nbgrp/npool/nimage =       8
+     338507 MiB available memory on the printing compute node when the environment starts
+ 
+
+     reading grid info from file GaAs.dyn0    
+  reading force constants from file GaAs.dyn1
+ macroscopic fields = T
+ 391.78612   0.00000   0.00000
+   0.00000 391.78612   0.00000
+   0.00000   0.00000 391.78612
+  na=            1
+   2.68551   0.00000   0.00000
+   0.00000   2.68551   0.00000
+   0.00000   0.00000   2.68551
+  na=            2
+  -3.19434   0.00000   0.00000
+   0.00000  -3.19434   0.00000
+   0.00000   0.00000  -3.19434
+Norm of the difference between old and new effective charges:    0.62317699429538675471
+  nqs=            1
+ q=   0.00000000  0.00000000  0.00000000
+  reading force constants from file GaAs.dyn2
+  nqs=            4
+ q=   0.50000000 -0.50000000  0.50000000
+ q=  -0.50000000  0.50000000  0.50000000
+ q=   0.50000000  0.50000000 -0.50000000
+ q=  -0.50000000 -0.50000000 -0.50000000
+  reading force constants from file GaAs.dyn3
+  nqs=            3
+ q=   0.00000000 -1.00000000  0.00000000
+ q=   0.00000000  0.00000000 -1.00000000
+ q=  -1.00000000  0.00000000  0.00000000
+
+      q-space grid ok, #points =    8
+
+      fft-check success (sum of imaginary terms < 10^-12)
+ 
+     Q2R          :      0.00s CPU      0.01s WALL
+
+ 
+   This run was terminated on:  15:35:43   1Dec2023            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=
