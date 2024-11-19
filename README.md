@@ -9,3 +9,4 @@ Cource contains several LAB works
 ### [LAB #1](https://github.com/AlexanderKvashnin/CMAS/blob/main/LAB1.md)
 ### [LAB #2](https://github.com/AlexanderKvashnin/CMAS/blob/main/LAB2.md)
 ### [LAB #3](https://github.com/AlexanderKvashnin/CMAS/blob/main/LAB3.md)
+### [LAB #4](https://github.com/AlexanderKvashnin/CMAS/blob/main/LAB4.md)
