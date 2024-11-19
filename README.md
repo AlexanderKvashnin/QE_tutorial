@@ -54,7 +54,7 @@ Try to write you one-line script to get the atomic positions
 (四). Chose optimal paramters for further calculations and explain your choise. 
 
 ## **Advanced HOMEWORK**
-(六). Use `relax` key-word in the input in order to calculate Equation of states (EOS), e.g. `E(V)` dependence.
+(六). Use `relax` keyword in the input in order to calculate Equation of states (EOS), e.g. `E(V)` dependence.
 
 (七). Calculate bulk modulus of your structure using EOS. 
 
@@ -89,3 +89,9 @@ The DOS data in the `C.dos.dat` file that we specified in our input file `input.
 (三). Define correct Fermi energy and the band gap of your semiconductor.
 
 (四). Compare your result with available literature data (experimental or theoretical). Explain the differencem if any.
+
+## **LAB #3**
+### **Electronic bands structure**
+
+
+
