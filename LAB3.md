@@ -23,5 +23,5 @@ band.x < input.6.pp > output.pp
 ```
 
 ## HOMEWORK
+To plot our result you need to modify the draft of the `bands.py` script 
 
-Next we need to run plotband.x We can run it interactively as follows (or you can provide an input file instead). In order to run interactively, type plotband.x in your terminal.
