@@ -1,0 +1,59 @@
+ &control
+    calculation  = 'vc-relax'
+    restart_mode = 'from_scratch'
+    pseudo_dir   = './'
+    outdir       = './'
+    prefix = 'C'
+    forc_conv_thr=1.0d-4
+    etot_conv_thr=1.0d-5
+    nstep=1000
+ /
+ &system
+    ibrav=0
+    nat=8
+    ntyp=1
+    ecutwfc=60.0
+    occupations = 'smearing'
+    degauss=0.05
+ /
+ &electrons
+    conv_thr = 1d-12,
+    mixing_beta=0.3,
+    electron_maxstep = 100
+ /
+&IONS
+  ion_dynamics='bfgs',
+  pot_extrapolation = "first_order",
+ /
+&CELL
+   cell_dynamics = 'bfgs' ,
+   cell_factor = 1.5,
+   press = 0 ,
+/
+
+# Type of atoms and Pseudopotential files. Change the name of PP
+
+ATOMIC_SPECIES
+C 12 C.pbe-n-rrkjus_psl.1.0.0.UPF    
+
+ATOMIC_POSITIONS {crystal}
+C 0.250000 0.750000 0.250000 
+C 0.000000 0.000000 0.500000 
+C 0.250000 0.250000 0.750000 
+C 0.000000 0.500000 0.000000 
+C 0.750000 0.750000 0.750000 
+C 0.500000 0.000000 0.000000 
+C 0.750000 0.250000 0.250000 
+C 0.500000 0.500000 0.500000 
+
+# Lattice parameters which can be specified in Angstroms or in Bohr
+
+CELL_PARAMETERS {Angstrom}
+3.573710 0.000000 0.000000
+0.000000 3.573710 0.000000
+0.000000 0.000000 3.57232
+
+# K-point grid
+
+K_POINTS {automatic}
+  8 8 8 1 1 1
