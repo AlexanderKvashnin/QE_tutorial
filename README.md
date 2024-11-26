@@ -6,8 +6,8 @@ This practical course aims to provide practical knowledge on how to start modell
 More details and information on the courses can be found [here](https://sites.skoltech.ru/iocd/courses/) 
 
 Cource contains several LAB works
-### [LAB #1](https://github.com/AlexanderKvashnin/CMAS/blob/main/LAB1.md)
-### [LAB #2](https://github.com/AlexanderKvashnin/CMAS/blob/main/LAB2.md)
-### [LAB #3](https://github.com/AlexanderKvashnin/CMAS/blob/main/LAB3.md)
-### [LAB #4](https://github.com/AlexanderKvashnin/CMAS/blob/main/LAB4.md)
-### [LAB #5](https://github.com/AlexanderKvashnin/CMAS/blob/main/LAB5.md)
+### [LAB #1](https://github.com/AlexanderKvashnin/CMAS/blob/main/LAB1.md) Optimization of crystal structure
+### [LAB #2](https://github.com/AlexanderKvashnin/CMAS/blob/main/LAB2.md) Calculation of electronic density of states
+### [LAB #3](https://github.com/AlexanderKvashnin/CMAS/blob/main/LAB3.md) Calculation of electronic bands structure
+### [LAB #4](https://github.com/AlexanderKvashnin/CMAS/blob/main/LAB4.md) Phonon density of states with DFPT
+### [LAB #5](https://github.com/AlexanderKvashnin/CMAS/blob/main/LAB5.md) Simulations of elastic properties
