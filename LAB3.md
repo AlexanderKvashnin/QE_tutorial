@@ -19,7 +19,7 @@ The bands are now calculated.
 We need some post processing in order to obtain the data in more usable manner. 
 Need to use `bands.x` program and `input.6.pp` inpute file to run post processing (PP) module
 ```
-band.x < input.6.pp > output.pp
+bands.x < input.6.pp > output.pp
 ```
 
 ## HOMEWORK
