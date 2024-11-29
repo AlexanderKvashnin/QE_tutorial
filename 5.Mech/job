@@ -9,7 +9,6 @@
 module load mpi/intel qe/7.2
 
 DIR=/home/elgatito/BACKUP1/students/tutorial/5.Mech
-
 cd $DIR
 
 for i in 0990 0995 1000 1005 1010
