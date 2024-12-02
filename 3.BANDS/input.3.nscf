@@ -1,0 +1,49 @@
+ &control
+    calculation='nscf'
+    restart_mode='from_scratch'
+    pseudo_dir   = './'
+    outdir       = './'
+    prefix = 'C'
+    verbosity='high'
+    forc_conv_thr = 0.01D-6
+    etot_conv_thr = 1D-5
+ /
+ &system
+    ibrav = 0
+    nat = 8
+    ntyp = 1
+    ecutwfc = 40
+    occupations='tetrahedra',
+    input_dft = 'pbe'
+    nosym = .TRUE.,
+    nbnd = 48
+ /
+ &electrons
+    conv_thr = 1.0e-8
+    electron_maxstep = 1000
+    mixing_beta = 0.2
+    diagonalization='cg',
+ /
+
+ATOMIC_SPECIES
+ C 12 C.pbe-n-rrkjus_psl.1.0.0.UPF
+
+ K_POINTS {automatic}
+ 8 8 8  0 0 0
+
+ATOMIC_POSITIONS (crystal)
+C             0.2499999991        0.7500000009        0.2499999991
+C             0.0000000000        0.0000000000        0.5000000000
+C             0.2499999991        0.2499999991        0.7500000009
+C             0.0000000000        0.5000000000        0.0000000000
+C             0.7500000009        0.7500000009        0.7500000009
+C             0.5000000000        0.0000000000        0.0000000000
+C             0.7500000009        0.2499999991        0.2499999991
+C             0.5000000000        0.5000000000        0.5000000000
+
+
+
+CELL_PARAMETERS {Angstrom}
+   3.570386424   0.000000000   0.000000000
+   0.000000000   3.570386424   0.000000000
+   0.000000000   0.000000000   3.570386424

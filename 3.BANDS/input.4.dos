@@ -1,0 +1,8 @@
+&DOS
+  prefix='C',
+  outdir='./',
+  fildos='C.dos.dat',
+  emin=-30.0,
+  emax=30.0
+/
+
