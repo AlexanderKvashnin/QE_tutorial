@@ -20,7 +20,20 @@ First several lines are
 #SBATCH -n 4 # Total number of mpi tasks #requested
 #SBATCH -t 999:00:00 # Run time (hh:mm:ss) - 1.5 hours
 ```
-which are service lines for task scheduler which is installed on the cluster. Most HPC cluster are working under the scheduler systems like this. Here all the information about your task is specified, namely, name of the job, name of the standard output file `job.%j.out`, number of compute nodes, number of cores and computational time. 
+which are service lines for task scheduler which is installed on the cluster. Most HPC cluster are working under the scheduler systems like this. Here all the information about your task is specified, namely, name of the job, name of the standard output file `job.%j.out`, number of compute nodes, number of cores and computational time. `j` is the external variable determining the `jobID`.
+
+After this you will find another line 
+```
+module load mpi/intel qe/7.2
+```
+which is responsbile for the load of special modulus. Here we load Intel MPI for parallel computing and `qe-7.2` which is `Quantum ESPRESSO` ver. 7.2, installed on the cluser. It needs to run programs without knowing where it is located.
+
+Next line is specification of the working directory for this LAB. 
+```
+DIR=/home/elgatito/BACKUP1/students/tutorial/5.Mech
+```
+This is internal variable which has a value only within this script. 
+
 
 Script `get_data.sh` is for collecting data after the calculations
 
