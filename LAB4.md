@@ -41,4 +41,7 @@ As a result you will obtain similar picture.
 ```
 matdyn.x < matdyn.dos.in > matdyn.dos.out
 ```
-And plot the phonon DOS by using the draft of the corresponding python script 
+And plot the phonon DOS by using the dtemplate of the corresponding python script.
+As example you will obtain the following picture
+![dos](https://github.com/user-attachments/assets/463bbce6-d58d-46e2-be4b-8ef9fa760ac4)
+
