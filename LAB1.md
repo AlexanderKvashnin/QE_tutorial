@@ -13,7 +13,7 @@ pw.x < input.1.opt > output.opt
 ```
 After a while you will find `output.opt` file in the folder.
 
-## **Useful code**
+## **Useful script**
 To get the energy values from the `output.opt` just type 
 ```
 grep ! output.opt
