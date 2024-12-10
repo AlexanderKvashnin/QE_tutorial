@@ -47,9 +47,34 @@ Variable `A` determines the actual lattice parameter for which we will perform t
 A=$(echo "scale=10; $i/1000*3.570387185" | bc);
 ```
 Here the number `3.570387185` is the lattice parameter of relax structure which you obtained during [LAB#1](https://github.com/AlexanderKvashnin/QE_tutorial/blob/main/LAB1.md)
-Now you can understand that `i` means the relative deformation times 1000. So 0990 means 0.99 raio of deformation. Why so? It is no so convenient to use names of files with dot, like `input.relax.0.99`. Different linux shells can process with such files in a wrong way. To be in a safe zone, we substitute 0.99 by 0990 within the `i` variable. 
+Now you can understand that `i` means the relative deformation times 1000. So 0990 means 0.99 raio of deformation. Why so? It is no so convenient to use names of files with dot, like `input.relax.0.99`. Different linux shells can process with such files in a wrong way. To be in a safe zone we substitute 0.99 by 0990 within the `i` variable. 
 
+Then we have special construction inside which we can specify entire input file which will be created
+```
+cat << EOF > $DIR/input.relax.$i
+```
+Here we are creating `input.relax.$i` in the `$DIR` folder. When you call variable you need to use `$` sign.
+All line below this one will written to the input file while the program will meet the line `EOF`.
+Between `cat` and `EOF` you can find all line which you are familiar with. 
+The most important part here is specification of lattice parameters in the lines 
+```
+CELL_PARAMETERS {Angstrom}
+$A 0.000000 0.000000
+0.000000 3.573710 0.000000
+0.000000 0.000000 3.573710
+```
+You can find that instead of the lattice parameter `a` here we put the variable `$A` which defines in the beginning of the script.
 
+Final line is 
+```
+mpirun -np 4 pw.x < input.relax.${i} | tee output.relax.${i}
+```
+which runs the `pw.x` with inpute file with the name  `input.relax.${i}` and create output file with the name `output.relax.${i}`. 
+
+Now you can run this script by submitting it to the queue using the command
+```
+sbatch job
+```
 
 
 Script `get_data.sh` is for collecting data after the calculations
