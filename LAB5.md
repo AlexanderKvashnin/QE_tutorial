@@ -1,7 +1,9 @@
 ## **LAB #5**
 ### **Mechanical properties**
 
-This is advanced type of LAB work as it contains only script `job` which will perform all the calculations. All information is located in the `5.Mech` folder.
+This LAB work is devited to calculations of elastic properties of materials using Density Functional Theory as impelemnted in the `Quantum ESPRESSO` program.
+
+advanced type of LAB work as it contains only script `job` which will perform all the calculations. All information is located in the `5.Mech` folder.
 
 Script `get_data.sh` is for collecting data after the calculations
 
