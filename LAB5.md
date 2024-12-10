@@ -76,11 +76,19 @@ Now you can run this script by submitting it to the queue using the command
 sbatch job
 ```
 
+## **Post-processing**
+
+You will get several output files, where you can find all necessary information.
+For the convenient there is another script which will help to extract all the data. Imagine that you will have 1000 output files? How can you get information from 1000 files?
+
 
 Script `get_data.sh` is for collecting data after the calculations
 
-(一). Try to understand what is written in the scripts
+## **HOMEWORK**
+(一). Try to understand the physical meaning of the script? 
 
-(二). Why do we have such types of scripts and such type of the calculations?
+(二). How can we calculate elastic constant C22?
 
-(三). What output information do we obtain?
+(三). How many files do you obtain? What output information do we obtain?
+
+(四*). How can we change the script to perform the simulations of large deformations? 
