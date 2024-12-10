@@ -26,8 +26,8 @@ The output is the following
 !    total energy              =     -99.34996271 Ry
 !    total energy              =     -99.34993847 Ry
 ```
-You can easily check how fast energy converges with respect to relaxation time.
-All required information about the structure is summarized in the output file
+You can easily check how fast energy converges with respect to relaxation steps.
+All required information about the structure is summarized in the output file named `output.opt`
 Similar command to get lattice parameters is
 ```
 grep -A3 CELL_PARAMETERS output.opt | tail -3
@@ -39,7 +39,8 @@ which gives you the following information
    0.000000000   0.000000000   3.570557570
 ```
 
-Try to write your one-line script to get the atomic positions
+(*) Try to write your one-line script to get the atomic positions
+
 
 ## **HOMEWORK**
 (一). Choose the structure of semiconductore (covalent material) from the materials project database (_https://next-gen.materialsproject.org/_)
