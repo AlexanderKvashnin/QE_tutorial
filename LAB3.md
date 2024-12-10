@@ -14,14 +14,17 @@ So, type
 ```
 pw.x < input.5.bands > output.bands
 ```
-
 The bands are now calculated. 
-We need some post processing in order to obtain the data in more usable manner. 
-Need to use `bands.x` program and `input.6.pp` inpute file to run post processing (PP) module
+
+We need some post-processing in order to obtain the data in more usable manner. 
+Need to use `bands.x` program and `input.6.pp` inpute file to run post-processing (PP) module
 ```
 bands.x < input.6.pp > output.pp
 ```
+After this step you will get the text file with electronic bands structure, which can be plotted using template of the python script `bands.py`.
 
 ## HOMEWORK
-To plot our result you need to modify the draft of the `bands.py` script 
+(一). Try to modify the python script to obtain nice electronic bands structure.
+
+(二). Modify the script to plot together bands structure and density of states.
 
