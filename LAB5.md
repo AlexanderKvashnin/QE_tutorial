@@ -80,15 +80,31 @@ sbatch job
 
 You will get several output files, where you can find all necessary information.
 For the convenient there is another script which will help to extract all the data. Imagine that you will have 1000 output files? How can you get information from 1000 files?
+Script `get_data.sh` is a linux bash script allowing extraction of information from the output files. 
 
+You can run it using the command
+```
+sh get_data.sh
+```
+After which you will get several files
+```
+data.c11
+data.c12
+data.c13
+data.cell
+```
+Here you have `stress-strain` dependencies, which sould be approximated by the linear function in order to find `Cij` constants. 
 
-Script `get_data.sh` is for collecting data after the calculations
 
 ## **HOMEWORK**
 (一). Try to understand the physical meaning of the script? 
 
-(二). How can we calculate elastic constant C22?
+(二). Construct 3x3 matrix of elastic constants containing C11, C22, C33 and all valuable non-diagonal elements.
 
-(三). How many files do you obtain? What output information do we obtain?
+(三). How can we calculate elastic constant C22, C33?
 
-(四*). How can we change the script to perform the simulations of large deformations? 
+(四). How many files do you obtain after the script `job` is finished?
+
+(五). What output information do we obtain by using `get_data.sh` script?
+
+(六). Why this LAB is limited for elastic deformations? How can we change the script to perform the simulations of larger deformations (plastic regime)? 
