@@ -28,11 +28,28 @@ module load mpi/intel qe/7.2
 ```
 which is responsbile for the load of special modulus. Here we load Intel MPI for parallel computing and `qe-7.2` which is `Quantum ESPRESSO` ver. 7.2, installed on the cluser. It needs to run programs without knowing where it is located.
 
-Next line is specification of the working directory for this LAB. 
+Next line is specification of the working directory for this LAB and `cd` command to go to this folder. 
 ```
 DIR=/home/elgatito/BACKUP1/students/tutorial/5.Mech
+cd $DIR
 ```
 This is internal variable which has a value only within this script. 
+
+Next two lines define the `for` loop 
+```
+for i in 0990 0995 1000 1005 1010
+do
+```
+Here variable `i` takes values in a loop equal to 0990, 0995, 1000, 1005, 1010 define the relative deformation of our unit cell. Why do we need to specify them is such a strange way? We split here variables needed for deformation and for naming of the files. 
+
+Variable `A` determines the actual lattice parameter for which we will perform the calculations, and defines as
+```
+A=$(echo "scale=10; $i/1000*3.570387185" | bc);
+```
+Here the number `3.570387185` is the lattice parameter of relax structure which you obtained during LAB#1
+Now you can understand that `i` means the relative deformation times 1000. So 0990 means 0.99 raio of deformation. Why so? It is no so convenient to use names of files with dot, like `input.relax.0.99`. Different linux shells can process with such files in a wrong way. To be in a safe zone, we substitute 0.99 by 0990 within the `i` variable. 
+
+
 
 
 Script `get_data.sh` is for collecting data after the calculations
