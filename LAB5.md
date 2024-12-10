@@ -46,7 +46,7 @@ Variable `A` determines the actual lattice parameter for which we will perform t
 ```
 A=$(echo "scale=10; $i/1000*3.570387185" | bc);
 ```
-Here the number `3.570387185` is the lattice parameter of relax structure which you obtained during LAB#1
+Here the number `3.570387185` is the lattice parameter of relax structure which you obtained during [LAB#1](https://github.com/AlexanderKvashnin/QE_tutorial/blob/main/LAB1.md)
 Now you can understand that `i` means the relative deformation times 1000. So 0990 means 0.99 raio of deformation. Why so? It is no so convenient to use names of files with dot, like `input.relax.0.99`. Different linux shells can process with such files in a wrong way. To be in a safe zone, we substitute 0.99 by 0990 within the `i` variable. 
 
 
