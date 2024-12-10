@@ -37,6 +37,6 @@ The DOS data in the `C.dos.dat` file that we specified in our input file `input.
 "tb09"  = "sla+pw+tb09+tb09"  = TB09 Meta-GGA
 ```
 #### Comments
-* To do this you need to compile Quantum ESPRESSO with Libxc library, which should be installed [separately](https://www.quantum-espresso.org/Doc/user_guide/node13.html).
+* To do this you need to compile `Quantum ESPRESSO` with Libxc library, which should be installed [separately](https://www.quantum-espresso.org/Doc/user_guide/node13.html).
 
 (七). Plot densities of electronic of states calculated with different meta-GGA functional to compare it with default one
