@@ -55,3 +55,23 @@ which gives you the following information
 (六). Use `relax` keyword in the input in order to calculate Equation of states (EOS), e.g. `E(V)` dependence.
 
 (七). Calculate bulk modulus of your structure using EOS. 
+
+### **Almost line-by-line explanation of the input file for relaxation**
+Description of all keywords for every input file in `QE` is located [here](https://www.quantum-espresso.org/Doc/INPUT_PW.html)  
+
+As one can note from the example of `input.1.opt` file presented in the `1.OPT` folder input file contains blocks of key parameters which are respondible for specifying of different parts of the task.
+
+Each block is started from the `&` symbol. This is specific character allowing QE to understant the blocks.
+First block named as `control` is here 
+```
+ &control
+    calculation  = 'vc-relax'            # type of the calculations, see the beginning of the LAB
+    restart_mode = 'from_scratch'        # do we need to start with previous steps of relaxation?
+    pseudo_dir   = './'                  # directory where required pseudopotential files are located 
+    outdir       = './'                  # directory where the output and auxilary files are stored to
+    prefix = 'C'                         # prepended to input/output filenames
+    forc_conv_thr=1.0d-4                 # convergence threshold on forces (a.u)
+    etot_conv_thr=1.0d-5                 # convergence threshold on total energy (a.u)
+    nstep=1000
+ /
+```
