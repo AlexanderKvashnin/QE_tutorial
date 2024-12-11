@@ -1,0 +1,15 @@
+#!/bin/bash
+#SBATCH -J dos # Job name
+#SBATCH -o job.%j.out # Name of stdout output file (%j expands to %jobId)
+#SBATCH -N 1 # Total number of nodes requested
+#SBATCH -n 4 # Total number of mpi tasks #requested
+#SBATCH -t 999:00:00 # Run time (hh:mm:ss) - 1.5 hours
+# Launch MPI-based executable
+
+module load mpi/intel qe/7.2
+
+#mpirun -np 32 /home/elgatito/soft/qe-7.2/bin/pw.x < input.1.opt | tee output.opt
+
+mpirun -np 4 /home/elgatito/soft/qe-7.2/bin/pw.x < input.2.scf | tee output.scf
+mpirun -np 4 /home/elgatito/soft/qe-7.2/bin/pw.x < input.3.nscf | tee output.nscf
+mpirun -np 4 /home/elgatito/soft/qe-7.2/bin/dos.x < input.4.dos | tee output.dos
