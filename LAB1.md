@@ -79,12 +79,39 @@ First block named as `control` is here
 Second block belongs to the studied structure. Paramters with necessary comments are below
 ```
 &system
-    ibrav=0                        # determine the type of Bravais lattice, see this [page](https://www.quantum-espresso.org/Doc/INPUT_PW.html#idm226) 
+    ibrav=0                        # determine the type of Bravais lattice 
     nat=8                          # number of atoms in the unit cell 
     ntyp=1                         # number of types of atoms in the unit cell
     ecutwfc=60.0                   # kinetic energy cutoff (Ry) for wavefunctions
-    occupations = 'smearing'       # type of occupation for electronic bands, see this [page](https://www.quantum-espresso.org/Doc/INPUT_PW.html#idm362)
+    occupations = 'smearing'       # type of occupation for electronic bands
     degauss=0.05                   # value of the gaussian spreading (Ry) for brillouin-zone
-integration, see [details](https://www.quantum-espresso.org/Doc/INPUT_PW.html#idm401)
+integration
  /
+```
+
+Third block is called `electrons` and here parameters for relaxation of electronic sub-system is specifyed
+```
+ &electrons
+    conv_thr = 1d-12,         # convergence threshold for selfconsistency
+    mixing_beta=0.3,          # mixing factor for self-consistency
+    electron_maxstep = 100    # maximum number of iterations in a scf step
+ /
+```
+
+If our calculation type is `relax` or `vc-relax`, then you need to spcify the next block of paramters related to ion relaxation
+```
+&IONS
+  ion_dynamics='bfgs',                  # specify the type of ionic dynamics
+  pot_extrapolation = "first_order",    # used to extrapolate the potential from preceding ionic steps
+ /
+```
+
+In the case of `vc-relax` another block of parameters is required called as `CELL`
+```
+&CELL
+   cell_dynamics = 'bfgs' ,         # specify the type of dynamics for the cell
+   cell_factor = 1.5,               # it should exceed the maximum linear contraction of the
+cell during a simulation
+   press = 0 ,                      # target pressure [KBar] in a variable-cell md or relaxation run
+/
 ```
