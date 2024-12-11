@@ -88,6 +88,7 @@ Second block belongs to the studied structure. Paramters with necessary comments
 integration
  /
 ```
+Our example is based on the diamond structure. Here we are using unit cell of 8 arbon atoms, thus the type of the Bravais lattice is selected to be 0. You can try to specify diamond structure using primitive cell of 2 atoms by using special type of the Bravais lattic. See [this](https://www.quantum-espresso.org/Doc/INPUT_PW.html#idm226).
 
 Third block is called `electrons` and here parameters for relaxation of electronic sub-system is specifyed
 ```
@@ -114,4 +115,37 @@ In the case of `vc-relax` another block of parameters is required called as `CEL
 cell during a simulation
    press = 0 ,                      # target pressure [KBar] in a variable-cell md or relaxation run
 /
+```
+
+Next lines are devoted to specification of the atomic species via definintion of the pseudopotential files for each atomic type
+```
+ATOMIC_SPECIES
+C 12 C.pbe-n-rrkjus_psl.1.0.0.UPF
+```
+Here we specify carbon atom with mass 12 and pseudopotential file with name `C.pbe-n-rrkjus_psl.1.0.0.UPF`. This file should be placed in the folder which you specify in the block `control` using keyword `pseudo_dir`.
+
+Next block is atomic positions which can be specified in different ways (please refer to [this](https://www.quantum-espresso.org/Doc/INPUT_PW.html#idm1495)). As in our example we use diamond fo study, here are coordinated of 8 carbon atoms in the structure using `{crystal}` representations of coordinates. 
+```
+C 0.250000 0.750000 0.250000 
+C 0.000000 0.000000 0.500000 
+C 0.250000 0.250000 0.750000 
+C 0.000000 0.500000 0.000000 
+C 0.750000 0.750000 0.750000 
+C 0.500000 0.000000 0.000000 
+C 0.750000 0.250000 0.250000 
+C 0.500000 0.500000 0.500000 
+```
+Next we specify the cell parametres of out structure using the following block 
+```
+CELL_PARAMETERS {Angstrom}
+3.573710 0.000000 0.000000
+0.000000 3.573710 0.000000
+0.000000 0.000000 3.57232
+```
+Explicit specification of call parameters is requiring only if you have not specified type of the Bravais lattice in the `system` block. Otherwise you do not need this block. See [this](https://www.quantum-espresso.org/Doc/INPUT_PW.html#idm226) for details.
+
+And the final block os devoted to k-point mesh. Here we use automatically generated uniform grid of k-points as specified by the `{automatic}` option, see below
+```
+K_POINTS {automatic}
+  8 8 8 1 1 1
 ```
