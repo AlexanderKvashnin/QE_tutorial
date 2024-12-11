@@ -56,7 +56,7 @@ which gives you the following information
 
 (七). Calculate bulk modulus of your structure using EOS. 
 
-### **Almost line-by-line explanation of the input file for relaxation**
+## **Almost line-by-line explanation of the input file for relaxation**
 Description of all keywords for every input file in `QE` is located [here](https://www.quantum-espresso.org/Doc/INPUT_PW.html)  
 
 As one can note from the example of `input.1.opt` file presented in the `1.OPT` folder input file contains blocks of key parameters which are respondible for specifying of different parts of the task.
@@ -73,5 +73,18 @@ First block named as `control` is here
     forc_conv_thr=1.0d-4                 # convergence threshold on forces (a.u)
     etot_conv_thr=1.0d-5                 # convergence threshold on total energy (a.u)
     nstep=1000
+ /
+```
+
+Second block belongs to the studied structure. Paramters with necessary comments are below
+```
+&system
+    ibrav=0                        # determine the type of Bravais lattice, see this [page](https://www.quantum-espresso.org/Doc/INPUT_PW.html#idm226) 
+    nat=8                          # number of atoms in the unit cell 
+    ntyp=1                         # number of types of atoms in the unit cell
+    ecutwfc=60.0                   # kinetic energy cutoff (Ry) for wavefunctions
+    occupations = 'smearing'       # type of occupation for electronic bands, see this [page](https://www.quantum-espresso.org/Doc/INPUT_PW.html#idm362)
+    degauss=0.05                   # value of the gaussian spreading (Ry) for brillouin-zone
+integration, see [details](https://www.quantum-espresso.org/Doc/INPUT_PW.html#idm401)
  /
 ```
