@@ -5,7 +5,7 @@ This LAB work is devoted to calculations of elastic properties of materials usin
 
 All required files are located in the `5.Mech` folder.
 
-The you can find several input files with names `input.relax.N`, where N is the deformation of the crystal (you will see later).
+The you can find several input files with names `input.relax.N`, where `N` is the deformation of the crystal (you will see later).
 
 Second idea of this LAB is to show that you can construct a single script file which will do multiple calculations.
 The main information (i.e. main script) is `job`. If you will open it you will find many lines of the codes. 
