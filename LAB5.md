@@ -95,6 +95,18 @@ data.cell
 ```
 Here you have `stress-strain` dependencies, which sould be approximated by the linear function in order to find `Cij` constants. 
 
+*Please remind* that you need to scale your data from `data.c**` files befor building the graph and before calculating the `Cij` constants. 
+So, you need to meka the following
+
+```
+sigma_new = max(sigma_old) - sigma_old
+```
+
+Using this you will obtain correct vaules, as we should plot the values w.r.t. initial structures. Ideally, initial structure should have stresses equal to 0. But in reality stresses are not 0, so need to scale our data w.r.t. initial stresses.
+
+Data from each file (data.c11 etc,) can be plotted as approximated by the linear function as shown below
+![image](https://github.com/user-attachments/assets/e2708b0f-30be-45f6-a74b-9dec2c8512d8)
+
 
 ## **HOMEWORK**
 (一). Try to understand the physical meaning of the script? 
