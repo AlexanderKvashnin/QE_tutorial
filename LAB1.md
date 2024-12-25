@@ -162,5 +162,6 @@ Thus, for alpha-quartz, the optimal cutoff energy could be chosen as 60 Ry.
 
 Similar graph could be obtained for dependence of the energy w.r.t. the number of k-points in the calculation, as shown below
 ![image](https://github.com/user-attachments/assets/08d21ac2-e35e-436c-85a2-06c700f2c07e)
+
 It is clearly seen that number of k-points larger than 1 is enough to obtain quite qood accuraty for this structure.
 
