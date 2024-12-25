@@ -149,3 +149,18 @@ And the final block os devoted to k-point mesh. Here we use automatically genera
 K_POINTS {automatic}
   8 8 8 1 1 1
 ```
+
+## **Convergence test for alpha-quartz**
+Imagine that you choose crystal structure of alpha-quartz (SiO2), which is shown below 
+![image](https://github.com/user-attachments/assets/b7f4dbbb-0b86-4eec-8f05-483c23ce9e70)
+
+then after relaxation you can perform the calculations for the convergence, after which you will obtain such graphs which are plotted w.r.t. cutoff energy
+![image](https://github.com/user-attachments/assets/c1545c31-a2d5-44d6-9690-e7c97ea5a4d3)
+
+One can see that starting from 60 Ry the energy difference becomes sufficiently small.
+Thus, for alpha-quartz, the optimal cutoff energy could be chosen as 60 Ry. 
+
+Similar graph could be obtained for dependence of the energy w.r.t. the number of k-points in the calculation, as shown below
+![image](https://github.com/user-attachments/assets/08d21ac2-e35e-436c-85a2-06c700f2c07e)
+It is clearly seen that number of k-points larger than 1 is enough to obtain quite qood accuraty for this structure.
+
