@@ -1,0 +1,47 @@
+ &control
+    calculation='scf'
+    restart_mode='from_scratch'
+    pseudo_dir   = './'
+    outdir       = './'
+    prefix = 'C'
+    verbosity='high'
+    forc_conv_thr = 0.01D-6
+    etot_conv_thr = 1D-5
+ /
+ &system
+    ibrav = 0
+    nat = 8
+    ntyp = 1
+    ecutwfc = 90
+    occupations='smearing',
+    degauss=0.005
+    input_dft = 'pbe'
+    nosym = .TRUE.,
+ /
+ &electrons
+    conv_thr = 1.0e-8
+    electron_maxstep = 1000
+    mixing_beta = 0.2
+    diagonalization='cg',
+ /
+ ATOMIC_SPECIES
+C 12 C.pbe-n-rrkjus_psl.1.0.0.UPF    # CHANGE THIS LINE ACCORDING TO YOUR PP
+
+ K_POINTS {automatic}
+ 12 12 12  0 0 0
+
+ATOMIC_POSITIONS (crystal)
+C             0.2500000004        0.7499999996        0.2500000011
+C             0.0000000000        0.0000000000        0.5000000000
+C             0.2500000004        0.2500000004        0.7499999989
+C             0.0000000000        0.5000000000        0.0000000000
+C             0.7499999996        0.7499999996        0.7499999989
+C             0.5000000000        0.0000000000        0.0000000000
+C             0.7499999996        0.2500000004        0.2500000011
+C             0.5000000000        0.5000000000        0.5000000000
+
+
+CELL_PARAMETERS {Angstrom}
+   3.570331383   0.000000000   0.000000000
+   0.000000000   3.570331383   0.000000000
+   0.000000000   0.000000000   3.570557570
