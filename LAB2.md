@@ -75,6 +75,11 @@ The DOS data in the `C.dos.dat` file that we specified in our input file `input.
 
 (四). Compare your result with available literature data (experimental or theoretical). Explain the differencem if any.
 
+
+As a result, for the SiO2 structure you should obtain this electronic DOS 
+![image](https://github.com/user-attachments/assets/e4049c78-4643-4436-bbd6-f74611bd56fa)
+
+
 ## **Advanced HOMEWORK**
 (六). Try to use metaGGA functionals to obtain more accurate value of the band gap. You can use `TB09` or others which are availabe in the `Quantum ESPRESSO` by specifying `input_dft` keyword in the input file for scf, nscf calculations.
 ```
