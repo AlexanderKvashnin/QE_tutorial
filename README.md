@@ -3,7 +3,7 @@ QE tutorial for Skoltech courses on Computational Methods in Atomistic Simulatio
 
 This practical course aims to provide practical knowledge on how to start modelling real systems, their electronic properties, stability and mechanical properties using electron density functional theory, which is implemented in the `Quantum ESPRESSO` software package
 
-More details and information on the courses can be found [here](https://sites.skoltech.ru/iocd/courses/) 
+More details and information on the courses can be found [here](https://iocd.ru/).
 
 Cource contains several LAB works
 ### [LAB #0](https://github.com/AlexanderKvashnin/QE_tutorial/blob/main/LAB0.md) Installation of Quantum ESPRESSO
