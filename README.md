@@ -12,3 +12,5 @@ Cource contains several LAB works
 ### [LAB #3](https://github.com/AlexanderKvashnin/QE_tutorial/blob/main/LAB3.md) Calculation of electronic bands structure
 ### [LAB #4](https://github.com/AlexanderKvashnin/QE_tutorial/blob/main/LAB4.md) Phonon density of states with DFPT
 ### [LAB #5](https://github.com/AlexanderKvashnin/QE_tutorial/blob/main/LAB5.md) Simulations of elastic properties
+
+If you would like to do Laboratory works using automated scripts with python, you can find tutorial [here](https://github.com/hasaki77/QE_Laboratory_Work), created my Khasan Akhmadiev
