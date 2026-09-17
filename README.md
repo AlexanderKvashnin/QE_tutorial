@@ -6,7 +6,7 @@ This practical course aims to provide practical knowledge on how to start modell
 More details and information on the courses can be found [here](https://iocd.ru/).
 
 Cource contains several LAB works
-### [LAB #0](https://github.com/AlexanderKvashnin/QE_tutorial/blob/main/LAB0.md) Installation of Quantum ESPRESSO
+### [LAB #0](https://github.com/AlexanderKvashnin/QE_tutorial/blob/main/LAB0.NEW.md) Installation of Quantum ESPRESSO
 ### [LAB #1](https://github.com/AlexanderKvashnin/QE_tutorial/blob/main/LAB1.md) Optimization of crystal structure
 ### [LAB #2](https://github.com/AlexanderKvashnin/QE_tutorial/blob/main/LAB2.md) Calculation of electronic density of states
 ### [LAB #3](https://github.com/AlexanderKvashnin/QE_tutorial/blob/main/LAB3.md) Calculation of electronic bands structure
